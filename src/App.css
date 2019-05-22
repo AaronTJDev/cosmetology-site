@@ -1,33 +1,122 @@
-.App {
-  text-align: center;
+/*
+Colors
+#BB6290 - MAIN
+#ECD4E0 - LIGHT MAIN
+#9A5176 - DARK MAIN
+#CDC6C6 - GRAY
+#FFFCF9 - WHITE
+#000000 - BLACK
+*/
+
+body {
+    background-color: #FFFCF9;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+    height:48pt;
+    background-color: #FFFCF9;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav i {
+    color:#555B6E;
+    margin-top: 12pt;
+    font-size:18pt;
 }
 
-.App-link {
-  color: #61dafb;
+.nav img {
+    height:56px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slide-nav {
+    top:0;
+    background-color: #BB6290;
+    color: #FFFCF9;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index:10;
+    padding:0;
+    right:100%;
+    opacity:0;
+}
+
+.slide-nav-active {
+    right:0%;
+    opacity: 1;
+    transition: opacity 400ms, right 400ms;
+}
+
+.slide-nav-exit-active {
+    right:100%;
+    opacity: 0;
+    transition: opacity 400ms, right 400ms;
+}
+
+.slide-nav ul {
+    text-align: center;
+    padding: 0;
+    width:100%;
+}
+.slide-nav li:first-child{
+    margin-top:18pt;
+}
+
+.slide-nav li {
+    padding:4pt 0;
+    list-style: none;
+    font-size:24pt;
+}
+
+.slide-nav div{
+    margin:0 12pt;
+    text-align: right;
+    font-size:24pt;
+}
+
+.slide-nav img {
+    padding:0;
+}
+
+.headline {
+    height:480pt;
+    padding:0;
+}
+
+.headline img {
+    height:320pt;
+    object-fit: cover;
+    object-position: 25% 30%;
+    padding:0
+}
+
+.header {
+    position:absolute;
+    top:50%;
+    color:#FFFCF9;
+    text-align: center;
+    font-family: 'Bad Script', cursive;
+}
+
+@media (min-width: 576px) { 
+    .headline img{
+        height:240pt;
+    }
+}
+
+@media (min-width: 768px) {  
+    .headline img{
+        height:320pt;
+    }
+}
+
+@media (min-width: 992px) {  
+    .headline img{
+        height:400pt;
+    }
+}
+
+@media (min-width: 1200px) {  
+    .headline img{
+        height:480pt;
+    }
 }

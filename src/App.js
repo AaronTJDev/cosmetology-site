@@ -1,26 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import Menu from './Menu/Menu'
 import './App.css';
+import lashImage from './img/Lashes1.jpg'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App container-fluid">
+            <Menu/>
+            <div className="headline col-12">
+                <img className="col-12" src={lashImage}/>
+                <h1 className="header col-12">Lashes by La'Nesha</h1>
+            </div>
+        </div>
+    );
 }
 
 export default App;
