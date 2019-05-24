@@ -1,6 +1,4 @@
 import React from 'react';
-import { CSSTransition } from 'react-transition-group';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import logo from '../logo.svg';
 
 
@@ -30,6 +28,11 @@ class Menu extends React.Component {
                 <div className="nav row">
                     <img alt="logo" className="col-md-1 col-3" src={logo}></img>
                     <i onClick={this.slide} className="fas fa-bars col-md-1 offset-md-10 col-2 offset-7"></i>
+                    <ul className="inline-nav col-10">
+                        <a href="/#service"><li className="offset-lg-4 offset-md-4 col-md-3 offset-3 col-3">Services</li></a>
+                        <a href="/#about"><li className=" col-md-3 col-3">About</li></a>
+                        <a href="/#contact"><li className="col-md-3 col-3">Contact Me</li></a>
+                    </ul>
                 </div>
 
                 <div className="slide-nav container-fluid">
@@ -37,10 +40,9 @@ class Menu extends React.Component {
                         <i onClick={this.slide} className="fas fa-times"></i>
                     </div>
                     <ul>
-                        <li>Home</li>
-                        <li>Book Now</li>
-                        <li>Services</li>
-                        <li>Contact Me</li>
+                    <a href="/#service" onClick={this.slide}><li>Services</li></a>
+                        <a href="/#about" onClick={this.slide}><li>About</li></a>
+                        <a href="/#contact" onClick={this.slide}><li>Contact Me</li></a>
                     </ul>
                     <img alt="logo" className="fixed-bottom col-md-1 col-3" src={logo}></img>
                 </div>
